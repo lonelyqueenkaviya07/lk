@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakshmi & Murali | Engagement Invitation</title>
+  <meta
+    name="description"
+    content="A modern, elegant engagement invitation website for Lakshmi and Murali on 18 May 2026 at Arulmigu Sri Puttru Maariyamman Kovil, Karanthai, Thanjavur."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #fff8fc;
+      --surface: rgba(255, 255, 255, 0.74);
+      --surface-strong: rgba(255, 255, 255, 0.9);
+      --border: rgba(130, 149, 197, 0.24);
+      --text: #273256;
+      --muted: #5d688e;
+      --pink: #e689b4;
+      --pink-soft: #fbe2ee;
+      --blue: #7aa7f1;
+      --blue-soft: #e7f0ff;
+      --lavender: #f2ecff;
+      --gold: #d7a95b;
+      --shadow: 0 18px 50px rgba(70, 78, 121, 0.16);
+      --radius-xl: 32px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1160px;
+      --nav-height: 76px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 0% 10%, rgba(248, 214, 230, 0.78), transparent 30%),
+        radial-gradient(circle at 100% 0%, rgba(219, 234, 255, 0.9), transparent 28%),
+        radial-gradient(circle at 85% 85%, rgba(242, 236, 255, 0.75), transparent 22%),
+        linear-gradient(160deg, #fff7fb, #fbfdff 48%, #fff9fd);
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body::before {
+      opacity: 0.18;
+      background-image:
+        radial-gradient(circle at 10% 16%, #efb1cd 0 2px, transparent 2px),
+        radial-gradient(circle at 88% 15%, #9ec1ff 0 2px, transparent 2px),
+        radial-gradient(circle at 18% 82%, #efbfd6 0 2px, transparent 2px),
+        radial-gradient(circle at 80% 78%, #b3ceff 0 2px, transparent 2px);
+      background-size: 240px 240px;
+    }
+
+    body::after {
+      opacity: 0.16;
+      background:
+        linear-gradient(120deg, transparent 0 44%, rgba(255, 255, 255, 0.6) 50%, transparent 56%) 0 0 / 280px 280px,
+        linear-gradient(300deg, transparent 0 44%, rgba(255, 255, 255, 0.44) 50%, transparent 56%) 0 0 / 220px 220px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(100% - 1.4rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      height: var(--nav-height);
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.58);
+      border-bottom: 1px solid rgba(133, 151, 191, 0.18);
+    }
+
+    .site-nav .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: "Playfair Display", Georgia, serif;
+      text-decoration: none;
+      font-size: clamp(1.2rem, 4vw, 1.7rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #b8578d;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.4rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      transition: transform 0.25s ease, color 0.25s ease, background 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a.is-active {
+      background: linear-gradient(90deg, rgba(251, 226, 238, 0.92), rgba(231, 240, 255, 0.94));
+      color: var(--text);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    main {
+      position: relative;
+    }
+
+    .page-section {
+      padding: clamp(3rem, 8vw, 5.5rem) 0;
+      scroll-margin-top: calc(var(--nav-height) + 18px);
+    }
+
+    .panel {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.64));
+      box-shadow: var(--shadow);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: auto auto -30px -30px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(230, 137, 180, 0.17), transparent 68%);
+      pointer-events: none;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      inset: 24px 24px auto auto;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(122, 167, 241, 0.14), transparent 66%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.48rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #526997;
+      background: linear-gradient(90deg, rgba(251, 226, 238, 0.88), rgba(231, 240, 255, 0.94));
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), var(--blue));
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      line-height: 1.15;
+      color: #24325a;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-heading p {
+      max-width: 62ch;
+      margin-inline: auto;
+      color: var(--muted);
+    }
+
+    .hero-panel {
+      padding: clamp(1.2rem, 3vw, 1.7rem);
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-media {
+      border-radius: calc(var(--radius-xl) - 8px);
+      min-height: 100%;
+    }
+
+    .hero-copy {
+      padding: clamp(1.4rem, 4vw, 2.8rem);
+      background:
+        linear-gradient(165deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.7)),
+        linear-gradient(135deg, rgba(252, 230, 240, 0.35), rgba(231, 240, 255, 0.2));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.8rem, 9vw, 5.8rem);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title span {
+      display: inline-block;
+      color: #cb5a92;
+      text-shadow: 0 10px 30px rgba(203, 90, 146, 0.16);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1.05rem, 3vw, 1.45rem);
+      font-weight: 600;
+      color: #405280;
+    }
+
+    .hero-story {
+      max-width: 58ch;
+      color: var(--muted);
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .meta-chip {
+      padding: 0.95rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--surface-strong);
+      border: 1px solid rgba(130, 149, 197, 0.18);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+
+    .meta-chip small {
+      display: block;
+      margin-bottom: 0.18rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      color: #7a84a8;
+      font-weight: 700;
+    }
+
+    .meta-chip strong {
+      font-size: 1rem;
+      color: #31406a;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      padding-top: 0.35rem;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.9rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease;
+    }
+
+    .button {
+      color: #fff;
+      background: linear-gradient(90deg, #da729f, #7ea6ec);
+      box-shadow: 0 14px 30px rgba(123, 150, 213, 0.22);
+    }
+
+    .button-secondary {
+      color: #34507f;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(131, 149, 194, 0.2);
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(123, 150, 213, 0.18);
+      outline: none;
+      filter: brightness(1.02);
+    }
+
+    .hero-media {
+      position: relative;
+      overflow: hidden;
+      min-height: 360px;
+      border: 1px solid rgba(136, 153, 194, 0.22);
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.4), transparent 42%),
+        linear-gradient(145deg, rgba(252, 230, 240, 0.6), rgba(227, 238, 255, 0.72));
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.02) contrast(1.02);
+    }
+
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(35, 45, 76, 0.12), transparent 35%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent 30%);
+      pointer-events: none;
+    }
+
+    .ornament {
+      position: absolute;
+      inset: auto 1rem 1rem auto;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(46, 60, 101, 0.44);
+      backdrop-filter: blur(8px);
+    }
+
+    .section-card {
+      padding: clamp(1.1rem, 3vw, 1.5rem);
+    }
+
+    .countdown-grid,
+    .venue-grid,
+    .footer-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .countdown-box,
+    .venue-copy,
+    .venue-map,
+    .footer-card {
+      padding: clamp(1rem, 3vw, 1.5rem);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(131, 150, 194, 0.2);
+      background: var(--surface);
+      backdrop-filter: blur(8px);
+    }
+
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .count-item {
+      text-align: center;
+      padding: 1rem 0.6rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 255, 0.8));
+      border: 1px solid rgba(131, 150, 194, 0.15);
+    }
+
+    .count-item strong {
+      display: block;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.75rem, 6vw, 2.7rem);
+      color: #304271;
+    }
+
+    .count-item span {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7480a4;
+      font-weight: 700;
+      margin-top: 0.2rem;
+    }
+
+    .count-status {
+      margin-top: 0.9rem;
+      color: #4c5a86;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .date-highlight {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background:
+        linear-gradient(160deg, rgba(231, 240, 255, 0.76), rgba(251, 226, 238, 0.72));
+    }
+
+    .date-highlight .day {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.4rem, 8vw, 4rem);
+      color: #c65d92;
+    }
+
+    .venue-list {
+      margin: 1rem 0 1.2rem;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .venue-list li {
+      display: grid;
+      gap: 0.18rem;
+      color: #48577f;
+    }
+
+    .venue-list strong {
+      color: #2b3964;
+    }
+
+    .venue-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.15rem;
+    }
+
+    .map-frame {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(132, 152, 194, 0.2);
+      min-height: 340px;
+      background: linear-gradient(160deg, rgba(244, 245, 255, 0.65), rgba(255, 240, 246, 0.7));
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      border: 0;
+    }
+
+    .footer-card {
+      text-align: center;
+      padding-block: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    .footer-card p {
+      color: #516088;
+    }
+
+    .footer-card .closing {
+      margin-top: 0.8rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: #c35d90;
+    }
+
+    .fade-up,
+    .fade-in,
+    .zoom-in {
+      opacity: 0;
+      will-change: transform, opacity;
+      transition:
+        transform 0.85s cubic-bezier(0.2, 0.9, 0.25, 1),
+        opacity 0.85s ease;
+    }
+
+    .fade-up {
+      transform: translateY(24px);
+    }
+
+    .fade-in {
+      transform: translateY(0);
+    }
+
+    .zoom-in {
+      transform: scale(0.95);
+    }
+
+    .is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .hero-copy .fade-up:nth-child(2) {
+      transition-delay: 0.08s;
+    }
+
+    .hero-copy .fade-up:nth-child(3) {
+      transition-delay: 0.16s;
+    }
+
+    .hero-copy .fade-up:nth-child(4) {
+      transition-delay: 0.24s;
+    }
+
+    .hero-copy .fade-up:nth-child(5) {
+      transition-delay: 0.32s;
+    }
+
+    .floating-petal {
+      position: fixed;
+      top: -24px;
+      width: 12px;
+      height: 18px;
+      border-radius: 10px 10px 10px 2px;
+      opacity: 0.22;
+      transform: rotate(35deg);
+      pointer-events: none;
+      z-index: 1;
+      animation: drift linear infinite;
+    }
+
+    .floating-petal.pink {
+      background: rgba(230, 137, 180, 0.65);
+    }
+
+    .floating-petal.blue {
+      background: rgba(122, 167, 241, 0.62);
+    }
+
+    @keyframes drift {
+      0% {
+        transform: translate3d(0, -10vh, 0) rotate(0deg);
+      }
+      100% {
+        transform: translate3d(30px, 110vh, 0) rotate(260deg);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .wrap {
+        width: min(100% - 2.2rem, var(--max));
+      }
+
+      .hero-grid,
+      .countdown-grid,
+      .venue-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-grid {
+        min-height: 660px;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+      .site-nav {
+        height: auto;
+        padding: 0.8rem 0;
+      }
+
+      .site-nav .wrap {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .fade-up,
+      .fade-in,
+      .zoom-in {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav" aria-label="Main Navigation">
+    <div class="wrap">
+      <a class="brand" href="#home">Lakshmi &amp; Murali</a>
+      <nav class="nav-links">
+        <a href="#home" class="is-active">Home</a>
+        <a href="#venue">Venue</a>
+        <a href="#location">Location</a>
+        <a href="#countdown">Countdown</a>
+        <a href="#footer">Thanks</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="page-section wrap">
+      <div class="panel hero-panel">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow fade-up">Engagement Ceremony 2026</span>
+            <h1 class="hero-title fade-up">
+              <span>Lakshmi</span> &#10084; <span>Murali</span>
+            </h1>
+            <p class="hero-tagline fade-up">We are getting engaged</p>
+            <p class="hero-story fade-up">
+              With the blessings of our families, we warmly invite you to join us for a
+              graceful evening of love, tradition, and joyful celebration as we begin our
+              beautiful new chapter together.
+            </p>
+            <div class="hero-meta fade-up" aria-label="Event summary">
+              <div class="meta-chip">
+                <small>Date</small>
+                <strong>18 May 2026</strong>
+              </div>
+              <div class="meta-chip">
+                <small>Time</small>
+                <strong>4:00 PM</strong>
+              </div>
+              <div class="meta-chip" style="grid-column: 1 / -1;">
+                <small>Venue</small>
+                <strong>Arulmigu Sri Puttru Maariyamman Kovil, Karanthai, Thanjavur</strong>
+              </div>
+            </div>
+            <div class="action-row fade-up">
+              <a class="button" href="#venue">Explore Invitation</a>
+              <a class="button-secondary" href="#location">View Location</a>
+            </div>
+          </div>
+
+          <div class="hero-media zoom-in">
+            <img
+              src="https://gioia.com.sg/wp-content/uploads/2018/10/Unique-Wedding-Bands-Perspective-1024x1024.webp"
+              alt="Romantic animated engagement rings exchange"
+            />
+            <div class="ornament"> Engagement</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="venue" class="page-section wrap">
+      <div class="panel section-card fade-in">
+        <div class="section-heading">
+          <span class="eyebrow">Venue Page</span>
+          <h2>Celebrate With Us</h2>
+          <p>
+            We look forward to welcoming you to a sacred and joyful setting for this
+            memorable occasion.
+          </p>
+        </div>
+
+        <div class="venue-grid">
+          <article class="venue-copy fade-up">
+            <h3>Event Details</h3>
+            <center>
+            <ul class="venue-list">
+              <li><strong>Bride</strong><span>LAKSHMI</span></li>
+              <li><strong>Groom</strong><span>MURALI</span></li>
+              <li><strong>Date</strong><span>18 May 2026</span></li>
+              <li><strong>Time</strong><span>4:00 PM</span></li>
+              <li>
+                <strong>Venue</strong>
+                <span>ARULMIGU SRI PUTTRU MAARIYAMMAN KOVIL, KARANTHAI, THANJAVUR,613002</span>
+              </li>
+            </ul>
+            </center>
+
+            <div class="venue-actions">
+              <a class="button" href="#location">View Venue</a>
+              <a
+                class="button-secondary"
+                href="https://maps.app.goo.gl/VNcjV9XgADmtwJBs8"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open in Maps
+              </a>
+            </div>
+          </article>
+
+          <div class="venue-copy fade-up">
+            <h3>Join Our Blessings</h3>
+            <center>
+            <p style="color: var(--muted);">
+              <br><br> <br> 
+              “With immense joy in our hearts <br>
+              and the blessings of our families,<br> 
+              we are delighted to invite you<br>
+          
+               to celebrate a beautiful mileston<br>
+               e in our lives. Lakshmi and Murali <br>
+               are embarking on a journey <br>
+               of love, trust, and togetherness,<br>
+
+                and we would be truly<br>
+                 honored to have your presence <br>
+                 as we mark the beginning<br>
+                  of this new chapter".<br>
+            </p>
+            </center>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="page-section wrap">
+      <div class="panel section-card fade-in">
+        <div class="section-heading">
+          <span class="eyebrow">Location Page</span>
+          <h2>Find the Venue</h2>
+          <p>
+            Arulmigu Sri Puttru Maariyamman Kovil, Karanthai, Thanjavur
+          </p>
+        </div>
+
+        <div class="venue-map fade-up">
+          <div class="map-frame">
+            <iframe
+              title="Google map of Arulmigu Sri Puttru Maariyamman Kovil, Karanthai, Thanjavur"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Arulmigu%20Sri%20Puttru%20Maariyamman%20Kovil%2C%20Karanthai%2C%20Thanjavur&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="countdown" class="page-section wrap">
+      <div class="panel section-card fade-in">
+        <div class="section-heading">
+          <span class="eyebrow">Countdown Page</span>
+          <h2>Until We Celebrate Together</h2>
+          <p>
+            Every passing moment brings us closer to a cherished evening filled with love,
+            blessings, and togetherness.
+          </p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="countdown-box fade-up">
+            <h3>Live Countdown</h3>
+            <div class="count-grid" aria-live="polite" aria-atomic="true">
+              <div class="count-item"><strong id="days">00</strong><span>Days</span></div>
+              <div class="count-item"><strong id="hours">00</strong><span>Hours</span></div>
+              <div class="count-item"><strong id="minutes">00</strong><span>Minutes</span></div>
+              <div class="count-item"><strong id="seconds">00</strong><span>Seconds</span></div>
+            </div>
+            <p id="count-status" class="count-status">Counting down to our engagement day.</p>
+          </div>
+
+          <div class="countdown-box date-highlight fade-up">
+            <div>
+              <p style="font-weight: 600; color: #55658f;">Save the date</p>
+              <div class="day">18 May</div>
+              <p style="font-size: 1rem; color: #465682;">Monday | 4:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="page-section wrap">
+    <div class="panel footer-card fade-in">
+      <span class="eyebrow">With Gratitude</span>
+      <h2 style="margin:0.9rem 0 0.7rem;">Thank You</h2>
+      <p>
+        With love and gratitude, thank you for being part of our special day -
+        Lakshmi &amp; Murali families...
+      </p>
+      <p class="closing">Lakshmi &amp; Murali</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var engagementTime = new Date("2026-05-18T16:00:00+05:30").getTime();
+      var countdownIds = ["days", "hours", "minutes", "seconds"];
+      var countdownNodes = countdownIds.map(function (id) {
+        return document.getElementById(id);
+      });
+      var countStatus = document.getElementById("count-status");
+
+      function pad(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function updateCountdown() {
+        var now = Date.now();
+        var remaining = engagementTime - now;
+
+        if (remaining <= 0) {
+          countdownNodes[0].textContent = "00";
+          countdownNodes[1].textContent = "00";
+          countdownNodes[2].textContent = "00";
+          countdownNodes[3].textContent = "00";
+          countStatus.textContent = "Today is the engagement celebration.";
+          return;
+        }
+
+        var totalSeconds = Math.floor(remaining / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.floor((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+
+        countdownNodes[0].textContent = pad(days);
+        countdownNodes[1].textContent = pad(hours);
+        countdownNodes[2].textContent = pad(minutes);
+        countdownNodes[3].textContent = pad(seconds);
+        countStatus.textContent = "Counting down to our engagement day.";
+      }
+
+      updateCountdown();
+      window.setInterval(updateCountdown, 1000);
+
+      var observed = document.querySelectorAll(".fade-up, .fade-in, .zoom-in");
+      if ("IntersectionObserver" in window) {
+        var animationObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                animationObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18 }
+        );
+
+        observed.forEach(function (element) {
+          animationObserver.observe(element);
+        });
+      } else {
+        observed.forEach(function (element) {
+          element.classList.add("is-visible");
+        });
+      }
+
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+      var sections = navLinks
+        .map(function (link) {
+          var targetId = link.getAttribute("href");
+          return document.querySelector(targetId);
+        })
+        .filter(Boolean);
+
+      if ("IntersectionObserver" in window) {
+        var sectionObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                navLinks.forEach(function (link) {
+                  var active = link.getAttribute("href") === "#" + entry.target.id;
+                  link.classList.toggle("is-active", active);
+                });
+              }
+            });
+          },
+          {
+            threshold: 0.4,
+            rootMargin: "-10% 0px -35% 0px"
+          }
+        );
+
+        sections.forEach(function (section) {
+          sectionObserver.observe(section);
+        });
+      }
+
+      var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reducedMotion) {
+        for (var i = 0; i < 12; i += 1) {
+          var petal = document.createElement("span");
+          petal.className = "floating-petal " + (i % 2 === 0 ? "pink" : "blue");
+          petal.style.left = Math.random() * 100 + "vw";
+          petal.style.animationDuration = 10 + Math.random() * 10 + "s";
+          petal.style.animationDelay = Math.random() * 6 + "s";
+          petal.style.opacity = (0.14 + Math.random() * 0.16).toFixed(2);
+          document.body.appendChild(petal);
+        }
+      }
+
+    })();
+  </script>
+</body>
+</html>
